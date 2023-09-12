@@ -1,0 +1,67 @@
+2023-09-12T16:53:09+00:00 CRITICAL Uncaught RuntimeException: Không thể yêu cầu các hành động. Lỗi cơ sở dữ liệu. in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:938
+Stack trace:
+#0 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(799): ActionScheduler_DBStore->claim_actions(0, 25, NULL, '', '')
+#1 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(310): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#5 C:\xampp8.1\htdocs\drink\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp8.1\htdocs\drink\wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 938
+
+2023-09-12T16:53:18+00:00 CRITICAL Uncaught RuntimeException: Lỗi lưu hành động: Table 'drink.wp_actionscheduler_actions' doesn't exist in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:126
+Stack trace:
+#0 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(69): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(327): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(315): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(175): ActionScheduler_ActionFactory->create(Array)
+#4 C:\xampp8.1\htdocs\drink\wp-content\plugins\pinterest-for-woocommerce\src\Heartbeat.php(62): as_schedule_recurring_action(1694537598, 86400, 'pinterest_for_w...', Array, 'pinterest-for-w...')
+#5 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(310): Automattic\WooCommerce\Pinterest\Heartbeat->schedule_events('')
+#6 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#7 C:\xampp8.1\htdocs\drink\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 C:\xampp8.1\htdocs\drink\wp-admin\admin.php(175): do_action('admin_init')
+#9 C:\xampp8.1\htdocs\drink\wp-admin\plugins.php(10): require_once('C:\\xampp8.1\\htd...')
+#10 {main}
+  thrown in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 126
+
+2023-09-12T16:53:18+00:00 CRITICAL Uncaught RuntimeException: Lỗi lưu hành động: Table 'drink.wp_actionscheduler_actions' doesn't exist in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:126
+Stack trace:
+#0 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(69): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(327): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(315): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(175): ActionScheduler_ActionFactory->create(Array)
+#4 C:\xampp8.1\htdocs\drink\wp-content\plugins\pinterest-for-woocommerce\src\Heartbeat.php(62): as_schedule_recurring_action(1694537598, 86400, 'pinterest_for_w...', Array, 'pinterest-for-w...')
+#5 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(310): Automattic\WooCommerce\Pinterest\Heartbeat->schedule_events('')
+#6 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#7 C:\xampp8.1\htdocs\drink\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 C:\xampp8.1\htdocs\drink\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#9 {main}
+  thrown in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 126
+
+2023-09-12T16:54:10+00:00 CRITICAL Uncaught RuntimeException: Không thể yêu cầu các hành động. Lỗi cơ sở dữ liệu. in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:938
+Stack trace:
+#0 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(799): ActionScheduler_DBStore->claim_actions(0, 25, NULL, '', '')
+#1 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(310): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#5 C:\xampp8.1\htdocs\drink\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp8.1\htdocs\drink\wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 938
+
+2023-09-12T16:54:10+00:00 CRITICAL Uncaught RuntimeException: Lỗi lưu hành động: Table 'drink.wp_actionscheduler_actions' doesn't exist in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:126
+Stack trace:
+#0 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(69): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(327): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(315): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(175): ActionScheduler_ActionFactory->create(Array)
+#4 C:\xampp8.1\htdocs\drink\wp-content\plugins\pinterest-for-woocommerce\src\Heartbeat.php(62): as_schedule_recurring_action(1694537650, 86400, 'pinterest_for_w...', Array, 'pinterest-for-w...')
+#5 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(310): Automattic\WooCommerce\Pinterest\Heartbeat->schedule_events('')
+#6 C:\xampp8.1\htdocs\drink\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters(NULL, Array)
+#7 C:\xampp8.1\htdocs\drink\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#8 C:\xampp8.1\htdocs\drink\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#9 {main}
+  thrown in C:\xampp8.1\htdocs\drink\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 126
+
